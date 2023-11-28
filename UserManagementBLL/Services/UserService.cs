@@ -13,7 +13,7 @@ public class UserService : Service<User>, IUserService
         _userRepository = userRepository;
     }
 
-    public async Task<User> GetUserByEmailAsync(string email)
+    public async Task<User?> GetUserByEmailAsync(string email)
     {
         return await _userRepository.GetUserByEmailAsync(email);
     }

@@ -17,7 +17,7 @@ public class Service<T> : IService<T> where T : class
         return await _repository.GetAllAsync();
     }
 
-    public async Task<T> GetByIdAsync(int id)
+    public async Task<T?> GetByIdAsync(int id)
     {
         return await _repository.GetByIdAsync(id);
     }
