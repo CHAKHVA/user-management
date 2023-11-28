@@ -13,7 +13,7 @@ public class UserProfileRepository : Repository<UserProfile>, IUserProfileReposi
 
     public async Task<IEnumerable<UserProfile>> GetActiveProfiles()
     {
-        return await _context.UserProfiles.Where(up => up.IsActive).ToListAsync();
+        return await _context.UserProfiles.Where(up => up.User.IsActive).ToListAsync();
     }
 }
 
