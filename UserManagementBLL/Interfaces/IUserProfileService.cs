@@ -4,6 +4,6 @@ namespace UserManagementBLL.Interfaces;
 
 public interface IUserProfileService : IService<UserProfile>
 {
-    Task<IEnumerable<UserProfile>> GetActiveUserProfilesAsync();
+    Task<IEnumerable<UserProfile>> GetActiveProfilesAsync();
 }
 

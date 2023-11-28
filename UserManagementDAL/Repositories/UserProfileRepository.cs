@@ -11,7 +11,7 @@ public class UserProfileRepository : Repository<UserProfile>, IUserProfileReposi
     {
     }
 
-    public async Task<IEnumerable<UserProfile>> GetActiveProfiles()
+    public async Task<IEnumerable<UserProfile>> GetActiveProfilesAsync()
     {
         return await _context.UserProfiles.Where(up => up.User.IsActive).ToListAsync();
     }

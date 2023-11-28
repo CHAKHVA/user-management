@@ -4,6 +4,6 @@ namespace UserManagementDAL.Interfaces;
 
 public interface IUserProfileRepository : IRepository<UserProfile>
 {
-    Task<IEnumerable<UserProfile>> GetActiveProfiles();
+    Task<IEnumerable<UserProfile>> GetActiveProfilesAsync();
 }
 
