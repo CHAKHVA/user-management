@@ -20,9 +20,13 @@
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Data\" />
+    <None Remove="Repositories\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Data\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
