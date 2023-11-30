@@ -20,9 +20,9 @@ public class AuthController : Controller
     }
 
     [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginModel loginModel)
+    public async Task<IActionResult> LoginAsync([FromBody] LoginModel loginModel)
     {
-        var user = _userService.ValidateUser(loginModel.Username, loginModel.Password);
+        var user = await _userService.ValidateUser(loginModel.Username, loginModel.Password);
         if (user == null)
         {
             return Unauthorized();
