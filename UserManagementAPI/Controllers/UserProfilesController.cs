@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using UserManagementAPI.DTOs.Requests;
 using UserManagementAPI.DTOs.Responses;
 using UserManagementBLL.Interfaces;
@@ -6,6 +7,7 @@ using UserManagementDAL.Entities;
 
 namespace UserManagementAPI.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserProfileController : ControllerBase

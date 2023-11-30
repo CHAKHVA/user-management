@@ -34,13 +34,11 @@
   <ItemGroup>
     <None Remove="Controllers\" />
     <None Remove="DTOs\" />
-    <None Remove="DTOs\Requests\" />
-    <None Remove="DTOs\Responses\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="DTOs\" />
-    <Folder Include="DTOs\Requests\" />
-    <Folder Include="DTOs\Responses\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
