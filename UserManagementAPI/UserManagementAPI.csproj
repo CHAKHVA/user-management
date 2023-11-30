@@ -11,6 +11,13 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,5 +27,17 @@
     <ProjectReference Include="..\UserManagementDAL\UserManagementDAL.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Requests\" />
+    <None Remove="DTOs\Responses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Requests\" />
+    <Folder Include="DTOs\Responses\" />
   </ItemGroup>
 </Project>

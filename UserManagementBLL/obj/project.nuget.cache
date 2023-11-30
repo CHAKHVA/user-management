@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jwRa7m1TPmLpsyqEYzVw3vCtUww+52bpRdFpoJ4UQQVb7zCzAETZvxFXicZc4xXzpT26VFHVDp7A+Aw6n3Ye6A==",
+  "dgSpecHash": "6K9GO9BO00Q4jUV77L3GJ0XPeDyUtI951IDOtvGR1gu0vLgRrPivkcwXoxp4bsjadAFO4hH8EHIZm+Dzy674Kg==",
   "success": true,
   "projectFilePath": "/Users/chakhva/Dev/CV/UserManagement/UserManagementBLL/UserManagementBLL.csproj",
   "expectedPackageFiles": [
     "/Users/chakhva/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/chakhva/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
+    "/Users/chakhva/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/chakhva/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/chakhva/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/chakhva/.nuget/packages/microsoft.data.sqlclient/5.1.1/microsoft.data.sqlclient.5.1.1.nupkg.sha512",

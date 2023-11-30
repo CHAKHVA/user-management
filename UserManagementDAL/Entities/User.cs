@@ -9,17 +9,17 @@ public class User
 
     [Required]
     [StringLength(255)]
-    public string Username { get; set; }
+    public required string Username { get; set; }
 
     [Required]
     [StringLength(255)]
-    public string Password { get; set; }
+    public required string Password { get; set; }
 
     [Required]
     [EmailAddress]
-    public string Email { get; set; }
+    public required string Email { get; set; }
 
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = false;
 
     public virtual UserProfile UserProfile { get; set; }
 }
