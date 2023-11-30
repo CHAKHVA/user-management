@@ -12,12 +12,12 @@ public class User
     public required string Username { get; set; }
 
     [Required]
-    [StringLength(255)]
-    public required string Password { get; set; }
-
-    [Required]
     [EmailAddress]
     public required string Email { get; set; }
+
+    [Required]
+    [StringLength(255)]
+    public required string Password { get; set; }
 
     public bool IsActive { get; set; } = false;
 

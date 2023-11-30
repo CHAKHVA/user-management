@@ -26,7 +26,7 @@ public class UsersController : Controller
         try
         {
             var users = await _userService.GetAllAsync();
-            var userResponses = users.Select(user => new UserResponse(user.UserId, user.Username, user.Email));
+            var userResponses = users.Select(user => new UserResponse(user.UserId, user.Username, user.Email, user.IsActive));
             return Ok(userResponses);
         }
         catch (Exception ex)
@@ -47,7 +47,7 @@ public class UsersController : Controller
                 return NotFound();
             }
 
-            var userResponse = new UserResponse(user.UserId, user.Username, user.Email);
+            var userResponse = new UserResponse(user.UserId, user.Username, user.Email, user.IsActive);
             return Ok(userResponse);
         }
         catch (Exception ex)
@@ -66,13 +66,14 @@ public class UsersController : Controller
             {
                 Username = request.Username,
                 Email = request.Email,
-                Password = PasswordHasher.HashPassword(request.Password)
+                Password = PasswordHasher.HashPassword(request.Password),
+                IsActive = request.IsActive
             };
 
             await _userService.CreateAsync(user);
-            var response = new UserResponse(user.UserId, user.Username, user.Email);
+            var response = new UserResponse(user.UserId, user.Username, user.Email, user.IsActive);
 
-            return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, response);
+            return CreatedAtAction(nameof(GetUserById), new { id = response.UserId }, response);
         }
         catch (Exception ex)
         {
@@ -92,10 +93,10 @@ public class UsersController : Controller
                 return NotFound();
             }
 
-            // Update user properties
             user.Email = request.Email ?? user.Email;
             if (request.Password != null)
                 user.Password = PasswordHasher.HashPassword(request.Password);
+            user.IsActive = request.IsActive ?? user.IsActive;
 
             await _userService.UpdateAsync(user);
             return NoContent();

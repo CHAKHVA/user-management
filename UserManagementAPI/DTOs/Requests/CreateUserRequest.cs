@@ -1,3 +1,18 @@
-﻿namespace UserManagementAPI.DTOs.Requests;
+﻿using System.ComponentModel.DataAnnotations;
 
-public record CreateUserRequest(string Username, string Email, string Password);
+namespace UserManagementAPI.DTOs.Requests;
+
+public record CreateUserRequest(
+    [Required]
+    [StringLength(255)]
+    string Username,
+
+    [Required]
+    [EmailAddress]
+    string Email,
+
+    [Required]
+    [StringLength(255)]
+    string Password,
+
+    bool IsActive = false);
